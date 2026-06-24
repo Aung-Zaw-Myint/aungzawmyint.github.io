@@ -19,6 +19,7 @@
             background: #ffffff;
             padding: 10px;
             text-align: center;
+            border-bottom: 1px solid #ddd;
         }
         nav a {
             margin: 0 15px;
@@ -39,6 +40,20 @@
             color: white;
             margin-top: 40px;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            vertical-align: top;
+            border-bottom: 1px solid #eee;
+        }
+        td:first-child {
+            font-weight: bold;
+            color: #1f3b4d;
+            width: 20%;
+        }
     </style>
 </head>
 
@@ -46,7 +61,7 @@
 
 <header>
     <h1>Dr. Aung Zaw Myint</h1>
-    <p>Applied Mathematics | Nonlinear PDEs | Reaction-Diffusion System| Dynamical Systems| Free-Boundary Problems | Mathematical Biology</p>
+    <p>Applied Mathematics | Nonlinear PDEs | Reaction-Diffusion Systems | Dynamical Systems | Free-Boundary Problems | Mathematical Biology</p>
 </header>
 
 <nav>
@@ -57,479 +72,410 @@
     <a href="#honors-awards">Honors &amp; Awards</a>
     <a href="#publications">Publications</a>
     <a href="#editorial-experience">Editorial Board &amp; Service</a>
-    <a href="#conferences">Conferences &amp; Presentations</a>
+    <a href="#conferences">Conferences</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <div class="container">
 
 <section class="section" id="profile">
-    <h2>Profile</h2>
-    <p>
-        Dr. Aung Zaw Myint is currently a Postdoctoral Fellow at Sirindhorn International Institute of Technology, Thammasat University, Thailand. He has also served as an Associate Professor of Mathematics at the University of Mandalay, Myanmar, since 2021.
-He received his Ph.D. in Applied Mathematics from Harbin Institute of Technology, China, specializing in Mathematical Biology with a focus on partial differential equations (PDE) models. His doctoral dissertation, “Qualitative Analysis of Some Reaction–Diffusion Systems,” investigated the qualitative behavior and mathematical structures of nonlinear diffusion processes arising in biological systems. His supervisor is Prof. Wang Mingxin, and his co-supervisor is Li Li.
+    <!-- Responsive Profile Image & Bio Section -->
+    <div style="display: flex; align-items: center; gap: 35px; margin-bottom: 30px; flex-wrap: wrap;">
+        
+        <!-- Profile Photo -->
+        <div style="flex: shrink 0; margin: 0 auto;">
+            <img src="profile.jpg" alt="Dr. Aung Zaw Myint" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #1f3b4d; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        </div>
+        
+        <!-- Quick Summary Text -->
+        <div style="flex: 1; min-width: 280px;">
+            <h2 style="margin: 0 0 10px 0; color: #1f3b4d;">Dr. Aung Zaw Myint</h2>
+            <p style="margin: 0 0 10px 0; font-weight: bold; color: #555;">Postdoctoral Fellow at SIIT, Thammasat University</p>
+            <p style="margin: 0; line-height: 1.6; color: #444;">
+                Specializing in the mathematical analysis of reaction-diffusion models, free boundary problems, and biological systems. Academic and research experience spanning across Myanmar, China, Germany, and Thailand.
+            </p>
+        </div>
+    </div>
 
-His research interests include mathematical biology, reaction–diffusion systems, free boundary problems, nonlinear partial differential equations, and dynamical systems. He has academic and research experience across Myanmar, China, Germany, and Thailand.
+    <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 25px;">
 
-Dr. Aung Zaw Myint is a researcher in Applied Mathematics focusing on nonlinear partial differential equations, dynamical systems,
-        free boundary problems, reaction-diffusion systems, and mathematical biology. Currently, Research interests encompass predator–prey models, reaction–diffusion systems, chemotaxis models, and free boundary problems. His work emphasizes the global existence, uniqueness, and a priori estimates of nonnegative solutions, as well as the existence, bifurcation, and stability of non-constant steady-state solutions emerging from constant semi-trivial equilibria. He further investigates the spreading and vanishing dynamics in free-boundary problems associated with population, disease, and ecological models.
-</p>
-<p>
-<a href="https://orcid.org/0000-0003-3340-4864" target="_blank">ORCID</a> |
-<a href="https://www.researchgate.net/profile/Aung-Myint" target="_blank">ResearchGate</a> |
-<a href="https://www.webofscience.com/wos/author/record/J-7803-2019" target="_blank">Web of Science</a> |
-<a href="https://www.scopus.com/authid/detail.uri?authorId=57200032535" target="_blank">Scopus</a>
-</p>
+    <p style="line-height: 1.6; color: #333;">
+        Dr. Aung Zaw Myint is currently a Postdoctoral Fellow at Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand. He has also served as an Associate Professor of Mathematics at the University of Mandalay, Myanmar, since 2021.
+        He received his Ph.D. in Applied Mathematics from Harbin Institute of Technology, China, specializing in Mathematical Biology with a focus on partial differential equations (PDE) models. His doctoral dissertation, “Qualitative Analysis of Some Reaction–Diffusion Systems,” investigated the qualitative behavior and mathematical structures of nonlinear diffusion processes arising in biological systems. His supervisor is Prof. Wang Mingxin, and his co-supervisor is Li Li.
+    </p>
+    <p style="line-height: 1.6; color: #333;">
+        His research interests include mathematical biology, reaction–diffusion systems, free boundary problems, nonlinear partial differential equations, and dynamical systems. His work emphasizes the global existence, uniqueness, and a priori estimates of nonnegative solutions, as well as the existence, bifurcation, and stability of non-constant steady-state solutions emerging from constant semi-trivial equilibria. He further investigates the spreading and vanishing dynamics in free-boundary problems associated with population, disease, and ecological models.
+    </p>
+    
+    <p style="margin-top: 25px; font-weight: bold;">
+        <a href="https://orcid.org/0000-0003-3340-4864" target="_blank" style="color: #1f3b4d; text-decoration: none;">ORCID</a> |
+        <a href="https://www.researchgate.net/profile/Aung-Myint" target="_blank" style="color: #1f3b4d; text-decoration: none;">ResearchGate</a> |
+        <a href="https://www.webofscience.com/wos/author/record/J-7803-2019" target="_blank" style="color: #1f3b4d; text-decoration: none;">Web of Science</a> |
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=57200032535" target="_blank" style="color: #1f3b4d; text-decoration: none;">Scopus</a>
+    </p>
 </section>
 
 <section class="section" id="research">
-<h2>Research Interests</h2>
-    <ul>
+    <h2>Research Interests</h2>
+    <ul style="line-height: 1.8;">
         <li>Partial Differential Equations</li>
         <li>Free Boundary Problems</li>
         <li>Reaction-Diffusion Systems</li>
-        <li>Mathematical Biology</li>
+        <li>Mathematical Biology (Predator-prey &amp; Chemotaxis models)</li>
         <li>Nonlinear Analysis</li>
     </ul>
 </section>
 
-  <section class="section" id="education">
-<h2>Education</h2>
+<section class="section" id="education">
+    <h2>Education</h2>
     <table>
-<tr>
-<td>2019</td>
-<td>Doctor of Science (Mathematics),
-Harbin Institute of Technology, China</td>
-</tr>
-
-<tr>
-<td>2011</td>
-<td>M.Sc. Mathematics,
-Kyaingtong University, Myanmar</td>
-</tr>
-
-<tr>
-<td>2008</td>
-<td>B.Sc. Mathematics,
-Yadanabon University, Myanmar</td>
-</tr>
-</table>
+        <tr>
+            <td>2019</td>
+            <td>Doctor of Science (Mathematics),<br>Harbin Institute of Technology, China</td>
+        </tr>
+        <tr>
+            <td>2011</td>
+            <td>M.Sc. Mathematics,<br>Kyaingtong University, Myanmar</td>
+        </tr>
+        <tr>
+            <td>2008</td>
+            <td>B.Sc. Mathematics,<br>Yadanabon University, Myanmar</td>
+        </tr>
+    </table>
 </section>
 
-  <section class="section" id="experience">
-<h2>Professional Experience</h2>
+<section class="section" id="experience">
+    <h2>Professional Experience</h2>
     <table>
-<tr>
-<td>2026-Present</td>
-<td>Postdoctoral Fellow, Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand</td>
-</tr>
-<tr>
-<td>2021-2026</td>
-<td>Associate Professor, Department of Mathematics, University of Mandalay</td>
-</tr>
-<tr>
-<td>June 2024-July 2024</td>
-<td>Visiting Professor, Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand</td>
-</tr>
-<tr>
-<td>1st-30th October 2018</td>
-<td>Young Researcher Exchange, Zhejiang Lab, Hangzhou, China</td>
-</tr>
-<tr>
-<td>1st-30th August 2017</td>
-<td>Visiting Researcher, Chiang Mai University, Chiang Mai, Thailand</td>
-</tr>     
-</tr>     
-<td>2019-2021</td>
-<td>Lecturer, Department of Mathematics, University of Mandalay</td>
-</tr> 
-</tr>     
-<td>September 2019 - October 2019</td>
-<td>Young Researcher, Scientific Exchange Program, University of Heidelberg, Germany</td>
-</tr> 
-</tr>     
-<td>2011-2015</td>
-<td> Tutor, Department of Mathematics, Yandanarbon University, Mandalay, Myanmar</td>
-</tr>
-</tr>     
-<td>2011-2015</td>
-<td> Tutor, Department of Mathematics, Kyaingtong University, Eastern Shan State, Myanmar</td>
-</tr> 
-</table>   
+        <tr>
+            <td>2026-Present</td>
+            <td>Postdoctoral Fellow, Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand</td>
+        </tr>
+        <tr>
+            <td>2021-2026</td>
+            <td>Associate Professor, Department of Mathematics, University of Mandalay, Myanmar</td>
+        </tr>
+        <tr>
+            <td>June 2024-July 2024</td>
+            <td>Visiting Professor, Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand</td>
+        </tr>
+        <tr>
+            <td>Oct 2018</td>
+            <td>Young Researcher Exchange, Zhejiang Lab, Hangzhou, China</td>
+        </tr>
+        <tr>
+            <td>Aug 2017</td>
+            <td>Visiting Researcher, Chiang Mai University, Chiang Mai, Thailand</td>
+        </tr>      
+        <tr>
+            <td>2019-2021</td>
+            <td>Lecturer, Department of Mathematics, University of Mandalay, Myanmar</td>
+        </tr> 
+        <tr>
+            <td>Sep 2019 - Oct 2019</td>
+            <td>Young Researcher, Scientific Exchange Program, University of Heidelberg, Germany</td>
+        </tr> 
+        <tr>
+            <td>2011-2015</td>
+            <td>Tutor, Department of Mathematics, Yadanarbon University, Mandalay, Myanmar</td>
+        </tr>     
+        <tr>
+            <td>2011-2015</td>
+            <td>Tutor, Department of Mathematics, Kyaingtong University, Eastern Shan State, Myanmar</td>
+        </tr> 
+    </table>   
 </section>
 
-<section id="honors-awards" style="font-family: system-ui, -apple-system, sans-serif; max-width: 800px; margin: 20px auto; padding: 20px; color: #333;">
-  <h2 style="border-bottom: 2px solid #0056b3; padding-bottom: 8px; color: #0056b3; font-size: 1.8rem; margin-bottom: 20px;">Honors &amp; Awards</h2>
-  
-  <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+<section id="honors-awards" style="color: #333;">
+    <h2 style="border-bottom: 2px solid #1f3b4d; padding-bottom: 8px; color: #1f3b4d;">Honors &amp; Awards</h2>
+    <ul style="list-style-type: none; padding-left: 0; margin: 0;">
+        <li style="margin-bottom: 20px; line-height: 1.6;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="font-size: 1.1rem; color: #222;">Chinese Scholarship Council (CSC) Scholarship Award</strong>
+                <span style="color: #666; font-weight: 500;">2015&ndash;2020</span>
+            </div>
+        </li>
+        <li style="margin-bottom: 20px; line-height: 1.6;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="font-size: 1.1rem; color: #222;">HIT STAR Award</strong>
+                <span style="color: #666; font-weight: 500;">January 2020</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem; margin-top: 2px;">Harbin Institute of Technology, Harbin, China</div>
+            <div style="font-size: 0.9rem; margin-top: 4px;">
+                <a href="http://studyathit.hit.edu.cn/post/detail/5665" target="_blank" rel="noopener" style="color: #1f3b4d; text-decoration: none; border-bottom: 1px dashed #1f3b4d;">Official Announcement</a>
+            </div>
+        </li>
+        <li style="margin-bottom: 20px; line-height: 1.6;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="font-size: 1.1rem; color: #222;">CSC PhD Student Outstanding Achievement Award</strong>
+                <span style="color: #666; font-weight: 500;">2019</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem; margin-top: 2px;">CSC PhD Student Forum, Beijing, China</div>
+        </li>
+        <li style="margin-bottom: 20px; line-height: 1.6;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="font-size: 1.1rem; color: #222;">Romberg Grant Award</strong>
+                <span style="color: #666; font-weight: 500;">2019</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem; margin-top: 2px;">Heidelberg University &amp; Heidelberg Laureate Forum Foundation, Heidelberg, Germany</div>
+            <div style="color: #666; font-size: 0.9rem; font-style: italic; margin-top: 4px; padding-left: 15px; border-left: 2px solid #ddd;">
+                Awarded to attend the 7th Heidelberg Laureate Forum.
+            </div>
+        </li>
+        <li style="margin-bottom: 20px; line-height: 1.6;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="font-size: 1.1rem; color: #222;">Math &amp; Art Project Honorable Certificate</strong>
+                <span style="color: #666; font-weight: 500;">2019</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem; margin-top: 2px;">7th Heidelberg Laureate Forum, Heidelberg, Germany</div>
+            <div style="color: #666; font-size: 0.9rem; font-style: italic; margin-top: 4px; padding-left: 15px; border-left: 2px solid #ddd;">
+                Received for the intercultural science-art project &ldquo;Magritte Meets Science&rdquo; as part of the forum.
+            </div>
+        </li>
+        <li style="margin-bottom: 20px; line-height: 1.6;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="font-size: 1.1rem; color: #222;">International Young Talent Honor Badge</strong>
+                <span style="color: #666; font-weight: 500;">2018</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem; margin-top: 2px;">International Young Talent Forum, Zhejiang Lab, P.R. China</div>
+        </li>
+    </ul>
+</section>
+
+<section id="publications" style="color: #333;">
+    <h2 style="border-bottom: 2px solid #1f3b4d; padding-bottom: 8px; color: #1f3b4d; margin-bottom: 25px;">Publications</h2>
     
-    <!-- Award 1 -->
-    <li style="margin-bottom: 20px; line-height: 1.6;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="font-size: 1.1rem; color: #222;">Chinese Scholarship Council (CSC) Scholarship Award</strong>
-        <span style="color: #666; font-weight: 500;">2015&ndash;2020</span>
-      </div>
-    </li>
+    <h3 style="color: #222; font-size: 1.3rem; border-left: 4px solid #1f3b4d; padding-left: 10px;">International Peer-Reviewed Journals</h3>
+    <ol style="padding-left: 20px; margin-bottom: 35px; line-height: 1.6;">
+        <li style="margin-bottom: 15px;">
+            <strong>Aung Zaw Myint</strong>, Aye Chan May, Mya Hnin Lwin, Toe Toe Shwe, &amp; Adisak Seesanea. 
+            "Dynamics and pattern formation in a diffusive Beddington-DeAngelis predator-prey model with fear effect," 
+            <em style="color: #555;">Discrete and Continuous Dynamical Systems - Series B</em>, 2025. 
+            <br><span style="font-size: 0.9rem; color: #666;">DOI: <a href="https://doi.org/10.3934/dcdsb.2025113" target="_blank" rel="noopener" style="color: #1f3b4d; text-decoration: none;">10.3934/dcdsb.2025113</a></span>
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Aung Zaw Myint</strong>. 
+            "Positive solutions of a diffusive two competitive species model with saturation," 
+            <em style="color: #555;">Discrete &amp; Continuous Dynamical Systems – Series B</em>, 2022, 27(7): 3625-3641. 
+            <br><span style="font-size: 0.9rem; color: #666;">Link: <a href="https://www.aimsciences.org/article/doi/10.3934/dcdsb.2021199" target="_blank" rel="noopener" style="color: #1f3b4d; text-decoration: none;">AIMS Press</a></span>
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Aung Zaw Myint</strong> &amp; Mingxin Wang. 
+            "Dynamics of Holling-type II Prey-Predator System with a protection zone for prey," 
+            <em style="color: #555;">Applicable Analysis</em>, 2020. 
+            <br><span style="font-size: 0.9rem; color: #666;">DOI: <a href="https://doi.org/10.1080/00036811.2020.1789595" target="_blank" rel="noopener" style="color: #1f3b4d; text-decoration: none;">10.1080/00036811.2020.1789595</a></span>
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Aung Zaw Myint</strong>, Jingping Wang, &amp; Mingxin Wang. 
+            "On the minimal Keller-Segel system with logistic growth," 
+            <em style="color: #555;">Nonlinear Analysis: Real World Applications</em>, 2020, 55: 103121. 
+            <br><span style="font-size: 0.9rem; color: #666;">Link: <a href="https://www.sciencedirect.com/science/article/abs/pii/S1468121820300390" target="_blank" rel="noopener" style="color: #1f3b4d; text-decoration: none;">ScienceDirect</a></span>
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Aung Zaw Myint</strong>, Li Li, &amp; Mingxin Wang. 
+            "Qualitative analysis of a Belousov-Zhabotinskii reaction model," 
+            <em style="color: #555;">Acta Math. Sin. (Engl. Ser.)</em>, 2018, 34(6): 975–991. 
+            <br><span style="font-size: 0.9rem; color: #666;">Link: <a href="https://link.springer.com/article/10.1007/s10114-017-7295-8" target="_blank" rel="noopener" style="color: #1f3b4d; text-decoration: none;">Springer</a></span>
+        </li>
+    </ol>
 
-    <!-- Award 2 -->
-    <li style="margin-bottom: 20px; line-height: 1.6;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="font-size: 1.1rem; color: #222;">HIT STAR Award</strong>
-        <span style="color: #666; font-weight: 500;">January 2020</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem; margin-top: 2px;">Harbin Institute of Technology, Harbin, China</div>
-      <div style="font-size: 0.9rem; margin-top: 4px;">
-        <a href="http://studyathit.hit.edu.cn/post/detail/5665" target="_blank" rel="noopener" style="color: #0056b3; text-decoration: none; border-bottom: 1px dashed #0056b3;">Official Announcement</a>
-      </div>
-    </li>
-
-    <!-- Award 3 -->
-    <li style="margin-bottom: 20px; line-height: 1.6;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="font-size: 1.1rem; color: #222;">CSC PhD Student Outstanding Achievement Award</strong>
-        <span style="color: #666; font-weight: 500;">2019</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem; margin-top: 2px;">CSC PhD Student Forum, Beijing, China</div>
-    </li>
-
-    <!-- Award 4 -->
-    <li style="margin-bottom: 20px; line-height: 1.6;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="font-size: 1.1rem; color: #222;">Romberg Grant Award</strong>
-        <span style="color: #666; font-weight: 500;">2019</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem; margin-top: 2px;">Heidelberg University &amp; Heidelberg Laureate Forum Foundation, Heidelberg, Germany</div>
-      <div style="color: #666; font-size: 0.9rem; font-style: italic; margin-top: 4px; padding-left: 15px; border-left: 2px solid #ddd;">
-        Awarded to attend the 7th Heidelberg Laureate Forum.
-      </div>
-    </li>
-
-    <!-- Award 5 -->
-    <li style="margin-bottom: 20px; line-height: 1.6;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="font-size: 1.1rem; color: #222;">Math &amp; Art Project Honorable Certificate</strong>
-        <span style="color: #666; font-weight: 500;">2019</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem; margin-top: 2px;">7th Heidelberg Laureate Forum, Heidelberg, Germany</div>
-      <div style="color: #666; font-size: 0.9rem; font-style: italic; margin-top: 4px; padding-left: 15px; border-left: 2px solid #ddd;">
-        Received for the intercultural science-art project &ldquo Magritte Meets Science &rdquo; as part of the forum.
-      </div>
-    </li>
-
-    <!-- Award 6 -->
-    <li style="margin-bottom: 20px; line-height: 1.6;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="font-size: 1.1rem; color: #222;">International Young Talent Honor Badge</strong>
-        <span style="color: #666; font-weight: 500;">2018</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem; margin-top: 2px;">International Young Talent Forum, Zhejiang Lab, P.R. China</div>
-    </li>
-
-  </ul>
+    <h3 style="color: #222; font-size: 1.3rem; border-left: 4px solid #1f3b4d; padding-left: 10px;">University Research Journals &amp; Conference Proceedings</h3>
+    <ol style="padding-left: 20px; line-height: 1.6;">
+        <li style="margin-bottom: 15px;">
+            <strong>Aung Zaw Myint</strong>, Ko Ko Lwin, Khin Than Sint, &amp; Zaw Min Aung. 
+            "$\hat{q}$-Homotopy Analysis Transform Method for the Nonlinear Belousov-Zhabotinskii Reaction Model," 
+            <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 14, No. 2, December, 2023, 223-241.
+        </li>
+        <li style="margin-bottom: 15px;">
+            Myat Tha Zin Hlaing &amp; <strong>Aung Zaw Myint</strong>. 
+            "Solving One-Dimensional Korteweg-De Vries Equation Based on Nonlinear Wave Equations," 
+            <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 13. No.2, December, 2022, 97-110.
+        </li>
+        <li style="margin-bottom: 15px;">
+            Aye Nandar Myint &amp; <strong>Aung Zaw Myint</strong>. 
+            "Existence and Uniqueness of Solutions for a Semilinear Problem Using Banach Fixed Point Theorem," 
+            <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 13. No.2, December, 2022, 121-128.
+        </li>
+        <li style="margin-bottom: 15px;">
+            Ei Nandar Moe, <strong>Aung Zaw Myint</strong>, &amp; Ei Thandar Soe. 
+            "Application of Elliptic Functions with Greenhill’s Pendulum," 
+            <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 13. No.2, December, 2022, 129-136.
+        </li>
+        <li style="margin-bottom: 15px;">
+            Ei Thandar Soe, <strong>Aung Zaw Myint</strong>, &amp; Ei Nandar Moe. 
+            "Some Properties of Jacobi Elliptic Functions," 
+            <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 13. No.2, December, 2022, 137-146.
+        </li>
+        <li style="margin-bottom: 15px;">
+            Han Zaw Htoon, Aung Kyaw Min, &amp; <strong>Aung Zaw Myint</strong>. 
+            "Direct Sum of Vector Subspaces in a Finite Dimensional Vector Space," 
+            <em style="color: #555;">Meiktila URJ</em>, Vol. 12. No.1, December, 2022, 200-207.
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Aung Zaw Myint</strong> &amp; Khin Than Sint. 
+            "Positive solutions a diffusive Predator-prey Model in Heterogeneous Environment," 
+            <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 12. No.2, December, 2021, 159-169.
+        </li>
+        <li style="margin-bottom: 15px;">
+            Khin Than Sint &amp; <strong>Aung Zaw Myint</strong>. 
+            "Solving Integral and Integro-Differential Equations via Laplace Transform Method," 
+            <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 12. No.2, December, 2021, 134-141.
+        </li>
+        <li style="margin-bottom: 15px;">
+            Aye Nandar Myint &amp; <strong>Aung Zaw Myint</strong>. 
+            "Finding the Complementary Function of Differential Equations," 
+            <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 12. No.2, December, 2021, 170-181.
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Aung Zaw Myint</strong>. 
+            "A mathematical model for COVID-19 transmission dynamics with a case study of Myanmar," 
+            <em style="color: #555;">Proceedings of Forum "Math-for-Industry" 2021—Mathematics for Digital Economy</em>. Institute of Mathematics for Industry, Kyushu University, MI Lecture Note Vol.87, 2021.
+        </li>
+        <li style="margin-bottom: 15px;">
+            <strong>Aung Zaw Myint</strong>. 
+            "Fractional Reduced Differential Transform Method for Belousov-Zhabotinsky Reaction Model," 
+            <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 11. No.3, May, 2020, 237-251. 
+            <br><span style="font-size: 0.9rem; color: #666;">Link: <a href="https://meral.edu.mm/records/5888" target="_blank" rel="noopener" style="color: #1f3b4d; text-decoration: none;">MERAL Portal</a></span>
+        </li>
+    </ol>
 </section>
 
-<section id="publications" style="font-family: system-ui, -apple-system, sans-serif; max-width: 850px; margin: 20px auto; padding: 20px; color: #333;">
-  <h2 style="border-bottom: 2px solid #0056b3; padding-bottom: 8px; color: #0056b3; font-size: 1.8rem; margin-bottom: 25px;">Publications</h2>
-  
-  <!-- Category 1: International Journals -->
-  <h3 style="color: #222; font-size: 1.3rem; margin-top: 10px; margin-bottom: 15px; border-left: 4px solid #0056b3; padding-left: 10px;">International Peer-Reviewed Journals</h3>
-  <ol style="padding-left: 20px; margin-bottom: 35px; line-height: 1.6;">
+<section id="editorial-experience" style="color: #333;">
+    <h2 style="border-bottom: 2px solid #1f3b4d; padding-bottom: 8px; color: #1f3b4d; margin-bottom: 25px;">Editorial Board &amp; Service</h2>
+    <ul style="list-style-type: none; padding-left: 0; margin: 0; line-height: 1.6;">
+        <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="font-size: 1.1rem; color: #222;">Editorial Board Member</strong>
+                <span style="color: #666; font-weight: 500;">June 2025 &ndash; Present</span>
+            </div>
+            <div style="color: #1f3b4d; font-weight: 500; font-size: 1rem; margin-top: 2px;">American Journal of Applied Mathematics</div>
+        </li>
+        <li style="margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="font-size: 1.1rem; color: #222;">Guest Editor</strong>
+                <span style="color: #666; font-weight: 500;">November 2022 &ndash; Present</span>
+            </div>
+            <div style="color: #1f3b4d; font-weight: 500; font-size: 1rem; margin-top: 2px;">International Journal of Cognitive Computing in Engineering</div>
+        </li>
+    </ul>
+</section>
+
+<section id="conferences" style="color: #333;">
+    <h2 style="border-bottom: 2px solid #1f3b4d; padding-bottom: 8px; color: #1f3b4d; margin-bottom: 25px;">Conferences &amp; Presentations</h2>
     
-    <!-- Pub 15 -->
-    <li style="margin-bottom: 15px;">
-      <strong>Aung Zaw Myint</strong>, Aye Chan May, Mya Hnin Lwin, Toe Toe Shwe, &amp; Adisak Seesanea. 
-      "Dynamics and pattern formation in a diffusive Beddington-DeAngelis predator-prey model with fear effect," 
-      <em style="color: #555;">Discrete and Continuous Dynamical Systems - Series B</em>, 2025. 
-      <br><span style="font-size: 0.9rem; color: #666;">DOI: <a href="https://doi.org/10.3934/dcdsb.2025113" target="_blank" rel="noopener" style="color: #0056b3; text-decoration: none;">10.3934/dcdsb.2025113</a></span>
-    </li>
+    <h3 style="color: #222; font-size: 1.3rem; border-left: 4px solid #1f3b4d; padding-left: 10px;">Presented at Conferences</h3>
+    <ul style="list-style-type: none; padding-left: 0; margin-bottom: 35px; line-height: 1.6;">
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">The AMM &amp; CNA 2026 Conference</strong>
+                <span style="color: #666; font-weight: 500;">May 28&ndash;30, 2026</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">Khon Kaen University, Thailand</div>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">Yanenko 105 &ndash; Analytical and Numerical Methods in Differential Equations</strong>
+                <span style="color: #666; font-weight: 500;">March 23&ndash;27, 2026</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">Hosted virtually by Suranaree University of Technology, Thailand</div>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">SEAMS School 2022 on Modern Trends in Signal and Data Processing</strong>
+                <span style="color: #666; font-weight: 500;">December 5&ndash;13, 2022</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">Institute of Mathematics, University of the Philippines Diliman, Quezon City, Metro Manila, Philippines</div>
+            <div style="color: #2c7a7b; font-size: 0.9rem; font-weight: 600; margin-top: 2px;">&bull; Invited Speaker (30-minute talk)</div>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">FORUM Mathematics for Industry 2021</strong>
+                <span style="color: #666; font-weight: 500;">December 12&ndash;16, 2021</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">Hanoi, Vietnam</div>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">SEAMS School 2021 on Modern Theory and Optimization</strong>
+                <span style="color: #666; font-weight: 500;">August 23 &ndash; September 3, 2021</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">Institute of Mathematics, Caraga State University, Butuan City, Philippines</div>
+            <div style="color: #2c7a7b; font-size: 0.9rem; font-weight: 600; margin-top: 2px;">&bull; Invited Speaker (30-minute talk)</div>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">ICCMB 2021: International Conference on Computation and Mathematical Biology</strong>
+                <span style="color: #666; font-weight: 500;">July 30&ndash;31, 2021</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">Organized by the Bangladesh Society for Mathematical Biology (BSMB)</div>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">12th Virtual Conference on Dynamical Systems Applied to Biology and Natural Sciences (DSABNS)</strong>
+                <span style="color: #666; font-weight: 500;">February 2&ndash;5, 2021</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">Spain (Virtual)</div>
+        </li>
+    </ul>
 
-    <!-- Pub 4 -->
-    <li style="margin-bottom: 15px;">
-      <strong>Aung Zaw Myint</strong>. 
-      "Positive solutions of a diffusive two competitive species model with saturation," 
-      <em style="color: #555;">Discrete &amp; Continuous Dynamical Systems – Series B</em>, 2022, 27(7): 3625-3641. 
-      <br><span style="font-size: 0.9rem; color: #666;">Link: <a href="https://www.aimsciences.org/article/doi/10.3934/dcdsb.2021199" target="_blank" rel="noopener" style="color: #0056b3; text-decoration: none;">AIMS Press</a></span>
-    </li>
-
-    <!-- Pub 2 -->
-    <li style="margin-bottom: 15px;">
-      <strong>Aung Zaw Myint</strong> &amp; Mingxin Wang. 
-      "Dynamics of Holling-type II Prey-Predator System with a protection zone for prey," 
-      <em style="color: #555;">Applicable Analysis</em>, 2020. 
-      <br><span style="font-size: 0.9rem; color: #666;">DOI: <a href="https://doi.org/10.1080/00036811.2020.1789595" target="_blank" rel="noopener" style="color: #0056b3; text-decoration: none;">10.1080/00036811.2020.1789595</a></span>
-    </li>
-
-    <!-- Pub 3 -->
-    <li style="margin-bottom: 15px;">
-      <strong>Aung Zaw Myint</strong>, Jingping Wang, &amp; Mingxin Wang. 
-      "On the minimal Keller-Segel system with logistic growth," 
-      <em style="color: #555;">Nonlinear Analysis: Real World Applications</em>, 2020, 55: 103121. 
-      <br><span style="font-size: 0.9rem; color: #666;">Link: <a href="https://www.sciencedirect.com/science/article/abs/pii/S1468121820300390" target="_blank" rel="noopener" style="color: #0056b3; text-decoration: none;">ScienceDirect</a></span>
-    </li>
-
-    <!-- Pub 1 -->
-    <li style="margin-bottom: 15px;">
-      <strong>Aung Zaw Myint</strong>, Li Li, &amp; Mingxin Wang. 
-      "Qualitative analysis of a Belousov-Zhabotinskii reaction model," 
-      <em style="color: #555;">Acta Math. Sin. (Engl. Ser.)</em>, 2018, 34(6): 975–991. 
-      <br><span style="font-size: 0.9rem; color: #666;">Link: <a href="https://link.springer.com/article/10.1007/s10114-017-7295-8" target="_blank" rel="noopener" style="color: #0056b3; text-decoration: none;">Springer</a></span>
-    </li>
-  </ol>
-
-  <!-- Category 2: Regional Journals & Proceedings -->
-  <h3 style="color: #222; font-size: 1.3rem; margin-top: 20px; margin-bottom: 15px; border-left: 4px solid #0056b3; padding-left: 10px;">University Research Journals &amp; Conference Proceedings</h3>
-  <ol style="padding-left: 20px; line-height: 1.6;">
-    
-    <!-- Pub 14 -->
-    <li style="margin-bottom: 15px;">
-      <strong>Aung Zaw Myint</strong>, Ko Ko Lwin, Khin Than Sint, &amp; Zaw Min Aung. 
-      "$\hat{q}$-Homotopy Analysis Transform Method for the Nonlinear Belousov-Zhabotinskii Reaction Model," 
-      <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 14, No. 2, December, 2023, 223-241.
-    </li>
-
-    <!-- Pub 9 -->
-    <li style="margin-bottom: 15px;">
-      Myat Tha Zin Hlaing &amp; <strong>Aung Zaw Myint</strong>. 
-      "Solving One-Dimensional Korteweg-De Vries Equation Based on Nonlinear Wave Equations," 
-      <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 13. No.2, December, 2022, 97-110.
-    </li>
-
-    <!-- Pub 10 -->
-    <li style="margin-bottom: 15px;">
-      Aye Nandar Myint &amp; <strong>Aung Zaw Myint</strong>. 
-      "Existence and Uniqueness of Solutions for a Semilinear Problem Using Banach Fixed Point Theorem," 
-      <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 13. No.2, December, 2022, 121-128.
-    </li>
-
-    <!-- Pub 11 -->
-    <li style="margin-bottom: 15px;">
-      Ei Nandar Moe, <strong>Aung Zaw Myint</strong>, &amp; Ei Thandar Soe. 
-      "Application of Elliptic Functions with Greenhill’s Pendulum," 
-      <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 13. No.2, December, 2022, 129-136.
-    </li>
-
-    <!-- Pub 12 -->
-    <li style="margin-bottom: 15px;">
-      Ei Thandar Soe, <strong>Aung Zaw Myint</strong>, &amp; Ei Nandar Moe. 
-      "Some Properties of Jacobi Elliptic Functions," 
-      <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 13. No.2, December, 2022, 137-146.
-    </li>
-
-    <!-- Pub 13 -->
-    <li style="margin-bottom: 15px;">
-      Han Zaw Htoon, Aung Kyaw Min, &amp; <strong>Aung Zaw Myint</strong>. 
-      "Direct Sum of Vector Subspaces in a Finite Dimensional Vector Space," 
-      <em style="color: #555;">Meiktila URJ</em>, Vol. 12. No.1, December, 2022, 200-207.
-    </li>
-
-    <!-- Pub 6 -->
-    <li style="margin-bottom: 15px;">
-      <strong>Aung Zaw Myint</strong> &amp; Khin Than Sint. 
-      "Positive solutions a diffusive Predator-prey Model in Heterogeneous Environment," 
-      <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 12. No.2, December, 2021, 159-169.
-    </li>
-
-    <!-- Pub 7 -->
-    <li style="margin-bottom: 15px;">
-      Khin Than Sint &amp; <strong>Aung Zaw Myint</strong>. 
-      "Solving Integral and Integro-Differential Equations via Laplace Transform Method," 
-      <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 12. No.2, December, 2021, 134-141.
-    </li>
-
-    <!-- Pub 8 -->
-    <li style="margin-bottom: 15px;">
-      Aye Nandar Myint &amp; <strong>Aung Zaw Myint</strong>. 
-      "Finding the Complementary Function of Differential Equations," 
-      <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 12. No.2, December, 2021, 170-181.
-    </li>
-
-    <!-- Pub 16 -->
-    <li style="margin-bottom: 15px;">
-      <strong>Aung Zaw Myint</strong>. 
-      "A mathematical model for COVID-19 transmission dynamics with a case study of Myanmar," 
-      <em style="color: #555;">Proceedings of Forum "Math-for-Industry" 2021—Mathematics for Digital Economy</em>. Institute of Mathematics for Industry, Kyushu University, MI Lecture Note Vol.87, 2021.
-    </li>
-
-    <!-- Pub 5 -->
-    <li style="margin-bottom: 15px;">
-      <strong>Aung Zaw Myint</strong>. 
-      "Fractional Reduced Differential Transform Method for Belousov-Zhabotinsky Reaction Model," 
-      <em style="color: #555;">Mandalay University Research Journal</em>, Vol. 11. No.3, May, 2020, 237-251. 
-      <br><span style="font-size: 0.9rem; color: #666;">Link: <a href="https://meral.edu.mm/records/5888" target="_blank" rel="noopener" style="color: #0056b3; text-decoration: none;">MERAL Portal</a></span>
-    </li>
-
-  </ol>
-</section>
-
-    <section id="editorial-experience" style="font-family: system-ui, -apple-system, sans-serif; max-width: 850px; margin: 20px auto; padding: 20px; color: #333;">
-  <h2 style="border-bottom: 2px solid #0056b3; padding-bottom: 8px; color: #0056b3; font-size: 1.8rem; margin-bottom: 25px;">Editorial Board &amp; Service</h2>
-  
-  <ul style="list-style-type: none; padding-left: 0; margin: 0; line-height: 1.6;">
-
-    <!-- Editorial Role 1 -->
-    <li style="margin-bottom: 20px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="font-size: 1.1rem; color: #222;">Editorial Board Member</strong>
-        <span style="color: #666; font-weight: 500;">June 2025 &ndash; Present</span>
-      </div>
-      <div style="color: #0056b3; font-weight: 500; font-size: 1rem; margin-top: 2px;">American Journal of Applied Mathematics</div>
-    </li>
-
-    <!-- Editorial Role 2 -->
-    <li style="margin-bottom: 20px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="font-size: 1.1rem; color: #222;">Guest Editor</strong>
-        <span style="color: #666; font-weight: 500;">November 2022 &ndash; Present</span>
-      </div>
-      <div style="color: #0056b3; font-weight: 500; font-size: 1rem; margin-top: 2px;">International Journal of Cognitive Computing in Engineering</div>
-    </li>
-
-  </ul>
-</section>
-
-    <section id="conferences" style="font-family: system-ui, -apple-system, sans-serif; max-width: 850px; margin: 20px auto; padding: 20px; color: #333;">
-  <h2 style="border-bottom: 2px solid #0056b3; padding-bottom: 8px; color: #0056b3; font-size: 1.8rem; margin-bottom: 25px;">Conferences &amp; Presentations</h2>
-  
-  <!-- Sub-section 1: Presentations -->
-  <h3 style="color: #222; font-size: 1.3rem; margin-top: 10px; margin-bottom: 15px; border-left: 4px solid #0056b3; padding-left: 10px;">Presented at Conferences</h3>
-  <ul style="list-style-type: none; padding-left: 0; margin-bottom: 35px; line-height: 1.6;">
-
-    <!-- Presentation 1 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">The AMM &amp; CNA 2026 Conference</strong>
-        <span style="color: #666; font-weight: 500;">May 28&ndash;30, 2026</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">Khon Kaen University, Thailand</div>
-    </li>
-
-    <!-- Presentation 2 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">Yanenko 105 &ndash; Analytical and Numerical Methods in Differential Equations</strong>
-        <span style="color: #666; font-weight: 500;">March 23&ndash;27, 2026</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">Hosted virtually by Suranaree University of Technology, Thailand</div>
-    </li>
-
-    <!-- Presentation 3 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">SEAMS School 2022 on Modern Trends in Signal and Data Processing</strong>
-        <span style="color: #666; font-weight: 500;">December 5&ndash;13, 2022</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">Institute of Mathematics, University of the Philippines Diliman, Quezon City, Metro Manila, Philippines</div>
-      <div style="color: #2c7a7b; font-size: 0.9rem; font-weight: 600; margin-top: 2px;">&bull; Invited Speaker (30-minute talk)</div>
-    </li>
-
-    <!-- Presentation 4 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">FORUM Mathematics for Industry 2021</strong>
-        <span style="color: #666; font-weight: 500;">December 12&ndash;16, 2021</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">Hanoi, Vietnam</div>
-    </li>
-
-    <!-- Presentation 5 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">SEAMS School 2021 on Modern Theory and Optimization</strong>
-        <span style="color: #666; font-weight: 500;">August 23 &ndash; September 3, 2021</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">Institute of Mathematics, Caraga State University, Butuan City, Philippines</div>
-      <div style="color: #2c7a7b; font-size: 0.9rem; font-weight: 600; margin-top: 2px;">&bull; Invited Speaker (30-minute talk)</div>
-    </li>
-
-    <!-- Presentation 6 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">ICCMB 2021: International Conference on Computation and Mathematical Biology</strong>
-        <span style="color: #666; font-weight: 500;">July 30&ndash;31, 2021</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">Organized by the Bangladesh Society for Mathematical Biology (BSMB)</div>
-    </li>
-
-    <!-- Presentation 7 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">12th Virtual Conference on Dynamical Systems Applied to Biology and Natural Sciences (DSABNS)</strong>
-        <span style="color: #666; font-weight: 500;">February 2&ndash;5, 2021</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">Spain (Virtual)</div>
-    </li>
-  </ul>
-
-  <!-- Sub-section 2: Attendance -->
-  <h3 style="color: #222; font-size: 1.3rem; margin-top: 20px; margin-bottom: 15px; border-left: 4px solid #0056b3; padding-left: 10px;">Attended / Participated</h3>
-  <ul style="list-style-type: none; padding-left: 0; line-height: 1.6;">
-
-    <!-- Attendance 1 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">The 2nd International Online Conference on Mathematics and Applications (IOCMA 2026)</strong>
-        <span style="color: #666; font-weight: 500;">June 10&ndash;12, 2026</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">Online Conference</div>
-    </li>
-
-    <!-- Attendance 2 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">New Trends in Mathematical Biology</strong>
-        <span style="color: #666; font-weight: 500;">March 27, 2026</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">School of Arts and Sciences, Lebanese American University (LAU), Lebanon</div>
-    </li>
-
-    <!-- Attendance 3 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">Virtual Heidelberg Laureate Forum (HLF)</strong>
-        <span style="color: #666; font-weight: 500;">September 21&ndash;25, 2020</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">Germany (Virtual)</div>
-    </li>
-
-    <!-- Attendance 4 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">International E-Conference: Recent Advances in Biomathematics on Theme "Biomathematics to Combat the Threats of Mysterious Pathogen"</strong>
-        <span style="color: #666; font-weight: 500;">December 18&ndash;19, 2020</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">Organized by the Bangladesh Society for Mathematical Biology (BSMB)</div>
-    </li>
-
-    <!-- Attendance 5 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">7th Heidelberg Laureate Forum (HLF)</strong>
-        <span style="color: #666; font-weight: 500;">September 19&ndash;25, 2019</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">Heidelberg, Germany</div>
-    </li>
-
-    <!-- Attendance 6 -->
-    <li style="margin-bottom: 18px;">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
-        <strong style="color: #222;">Stochastic Models and Experiments in Ecology and Biology</strong>
-        <span style="color: #666; font-weight: 500;">Venice, Italy</span>
-      </div>
-      <div style="color: #555; font-size: 0.95rem;">European Centre for Living Technology (ECLT)</div>
-    </li>
-
-  </ul>
+    <h3 style="color: #222; font-size: 1.3rem; border-left: 4px solid #1f3b4d; padding-left: 10px;">Attended / Participated</h3>
+    <ul style="list-style-type: none; padding-left: 0; line-height: 1.6;">
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">The 2nd International Online Conference on Mathematics and Applications (IOCMA 2026)</strong>
+                <span style="color: #666; font-weight: 500;">June 10&ndash;12, 2026</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">Online Conference</div>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">New Trends in Mathematical Biology</strong>
+                <span style="color: #666; font-weight: 500;">March 27, 2026</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">School of Arts and Sciences, Lebanese American University (LAU), Lebanon</div>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">Virtual Heidelberg Laureate Forum (HLF)</strong>
+                <span style="color: #666; font-weight: 500;">September 21&ndash;25, 2020</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">Germany (Virtual)</div>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">International E-Conference: Recent Advances in Biomathematics on Theme "Biomathematics to Combat the Threats of Mysterious Pathogen"</strong>
+                <span style="color: #666; font-weight: 500;">December 18&ndash;19, 2020</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">Organized by the Bangladesh Society for Mathematical Biology (BSMB)</div>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">7th Heidelberg Laureate Forum (HLF)</strong>
+                <span style="color: #666; font-weight: 500;">September 19&ndash;25, 2019</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">Heidelberg, Germany</div>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+                <strong style="color: #222;">Stochastic Models and Experiments in Ecology and Biology</strong>
+                <span style="color: #666; font-weight: 500;">Venice, Italy</span>
+            </div>
+            <div style="color: #555; font-size: 0.95rem;">European Centre for Living Technology (ECLT)</div>
+        </li>
+    </ul>
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
-    <p>
-      <li>Email: mdy.aungzawmyint@gmail.com, aungzaw@siit.tu.ac.th</li>
+    <p style="line-height: 1.6;">
+        <strong>Emails:</strong> mdy.aungzawmyint@gmail.com, aungzaw@siit.tu.ac.th
     </p>
 </section>
 
+</div>
+
 <footer>
-    <p>© 2026 Dr. Aung Zaw Myint</p>
+    <p>&copy; 2026 Dr. Aung Zaw Myint</p>
 </footer>
 
 </body>
