@@ -233,21 +233,18 @@
             transform: translateY(-2px);
         }
  
-        /* LOGO CHIPS (within social row) */
-        .social-chip-logo {
-            padding: 8px 16px;
-            background: #FFFFFF;
-        }
- 
-        .social-chip-logo:hover {
-            background: #FFFFFF;
-            border-color: var(--highlight);
-        }
- 
-        .social-chip-logo img {
-            height: 18px;
+        /* Brand logo icon inside a chip (sits where the <i> icon goes) */
+        .chip-logo-icon {
+            height: 12px;
             width: auto;
-            display: block;
+            display: inline-block;
+            vertical-align: middle;
+        }
+ 
+        /* FontAwesome chip icons sized to match the logo height */
+        .social-chip i {
+            font-size: 12px;
+            line-height: 1;
         }
  
         /* STRUCTURAL CHRONOLOGY COMPONENT */
@@ -459,12 +456,12 @@
                 <p style="color: var(--text-main); font-size: 1.02rem; padding-bottom: 5px;">
                     Specializing in the mathematical analysis of reaction-diffusion models, free boundary problems, and complex biological networks. Scholarly matrix spanning research deployments across Myanmar, China, Germany, and Thailand.
                 </p>
-                
-              <div class="social-row">
+ 
+                <div class="social-row">
                     <a href="https://orcid.org/0000-0003-3340-4864" target="_blank" rel="noopener" class="social-chip"><i class="fa-brands fa-orcid" style="color: #A6CE39;"></i> ORCID</a>
                     <a href="https://www.researchgate.net/profile/Aung-Myint" target="_blank" rel="noopener" class="social-chip"><i class="fa-brands fa-researchgate" style="color: #00CCBB;"></i> ResearchGate</a>
-                        <a href="https://www.webofscience.com/wos/author/record/J-7803-2019" target="_blank" rel="noopener" class="social-chip"><img src="clarivate_logo.png" alt="Clarivate" class="chip-logo-icon"> Clarivate</a>
-                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57200032535" target="_blank" rel="noopener" class="social-chip"><img src="elsevier_logo.png" alt="Elsevier" class="chip-logo-icon"> Elsevier</a>
+                    <a href="https://www.webofscience.com/wos/author/record/J-7803-2019" target="_blank" rel="noopener" class="social-chip"><img src="clarivate_logo.png" alt="Clarivate" class="chip-logo-icon"> Clarivate (Web of Science)</a>
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57200032535" target="_blank" rel="noopener" class="social-chip"><img src="elsevier_logo.png" alt="Elsevier" class="chip-logo-icon"> Elsevier (Scopus / ScienceDirect)</a>
                 </div>
             </div>
         </div>
