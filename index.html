@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Aung Zaw Myint - Academic Profile</title>
-    <!-- FontAwesome icons for a modern, crisp academic look -->
+    <title>Dr. Aung Zaw Myint | Academic Profile</title>
+    <!-- Google Fonts for Editorial-grade Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Academic Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Modern CSS Custom Variables for easier maintenance */
         : root {
-            --primary-color: #1f3b4d;
-            --primary-light: #2c536c;
-            --text-dark: #2d3748;
-            --text-muted: #5a6a85;
-            --bg-canvas: #f4f7f9;
-            --bg-card: #ffffff;
-            --accent-green: #2c7a7b;
-            --border-color: #e2e8f0;
+            --primary-dark: #0B192C;     /* Deep Scholar Navy */
+            --primary-accent: #1E3E62;   /* Slate Structural Blue */
+            --highlight: #008DDA;         /* Contemporary Teal/Cyan Link Highlight */
+            --text-main: #1E293B;         /* Soft Charcoal for Reading Comfort */
+            --text-muted: #64748B;        /* Cool Gray for Subtext */
+            --bg-canvas: #F8FAFC;         /* Clean Gallery Off-white */
+            --bg-card: #FFFFFF;
+            --border-subtle: #E2E8F0;
+            --font-sans: 'Inter', -apple-system, sans-serif;
+            --font-serif: 'Playfair Display', Georgia, serif;
         }
 
         * {
@@ -31,43 +36,50 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: var(--font-sans);
             background-color: var(--bg-canvas);
-            color: var(--text-dark);
-            line-height: 1.6;
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* HEADER SECTION */
+        /* PREMIUM MINIMAL HERO */
         header {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            background-color: var(--primary-dark);
+            background-image: radial-gradient(circle at 80% 20%, rgba(30, 62, 98, 0.3) 0%, transparent 50%);
             color: white;
-            padding: 60px 20px;
+            padding: 90px 20px 70px 20px;
             text-align: center;
+            border-bottom: 4px solid var(--highlight);
         }
 
         header h1 {
-            font-size: 2.6rem;
+            font-family: var(--font-serif);
+            font-size: 3.2rem;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             letter-spacing: -0.5px;
         }
 
         header p {
-            font-size: 1.1rem;
-            max-width: 850px;
+            font-size: 1.15rem;
+            max-width: 900px;
             margin: 0 auto;
-            opacity: 0.9;
-            font-weight: 300;
+            color: #94A3B8;
+            font-weight: 400;
+            line-height: 1.5;
         }
 
-        /* STICKY NAVIGATION */
+        /* FLOATING STRUCTURAL NAV */
         nav {
-            background: var(--bg-card);
-            padding: 0 10px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 0 15px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            border-bottom: 1px solid var(--border-subtle);
             display: flex;
             justify-content: center;
             overflow-x: auto;
@@ -76,274 +88,312 @@
 
         nav a {
             display: inline-block;
-            padding: 15px 12px;
+            padding: 20px 16px;
             text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 600;
-            font-size: 0.9rem;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             transition: all 0.2s ease;
-            border-bottom: 3px solid transparent;
+            position: relative;
         }
 
         nav a:hover {
-            color: var(--primary-color);
-            background-color: rgba(31, 59, 77, 0.03);
+            color: var(--highlight);
         }
 
-        /* MAIN CONTENT CONTAINERS */
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 16px;
+            right: 16px;
+            height: 2px;
+            background-color: var(--highlight);
+            transform: scaleX(0);
+            transition: transform 0.25s ease;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* GRID PACKAGING */
         .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 1050px;
+            margin: 50px auto;
+            padding: 0 25px;
         }
 
         section {
             background: var(--bg-card);
-            padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-            border: 1px solid var(--border-color);
+            padding: 50px;
+            margin-bottom: 35px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+            border: 1px solid var(--border-subtle);
         }
 
+        /* SECTION HEADINGS */
         h2 {
-            font-size: 1.6rem;
-            color: var(--primary-color);
-            margin-bottom: 25px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--border-color);
-            position: relative;
+            font-family: var(--font-serif);
+            font-size: 1.9rem;
+            color: var(--primary-dark);
+            margin-bottom: 35px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
         h2::after {
             content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 60px;
-            height: 2px;
-            background-color: var(--primary-color);
+            flex: 1;
+            height: 1px;
+            background: var(--border-subtle);
         }
 
         h3 {
-            color: var(--text-dark);
-            font-size: 1.2rem;
-            margin: 25px 0 15px 0;
-            border-left: 4px solid var(--primary-color);
-            padding-left: 12px;
+            color: var(--primary-accent);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 35px 0 20px 0;
         }
 
         p {
-            margin-bottom: 15px;
-            color: var(--text-dark);
+            margin-bottom: 18px;
+            color: var(--text-main);
             text-align: justify;
         }
 
-        /* PROFILE SPECIFIC STYLES */
-        .profile-flex {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
+        /* MODERN PROFILE GRID */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 50px;
+            align-items: start;
         }
 
-        .profile-photo-wrapper {
-            flex: 0 0 auto;
-            margin: 0 auto;
+        .profile-photo-container {
+            text-align: center;
         }
 
-        .profile-photo-wrapper img {
-            width: 190px;
-            height: 190px;
-            border-radius: 50%;
+        .profile-photo-container img {
+            width: 200px;
+            height: 200px;
+            border-radius: 24px; /* Crisp modern radius over standard circles */
             object-fit: cover;
-            border: 4px solid var(--primary-color);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+            border: 1px solid var(--border-subtle);
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
         }
 
-        .profile-summary {
-            flex: 1;
-            min-width: 290px;
-        }
-
-        .profile-summary h3 {
+        .profile-info h3 {
             border: none;
             padding: 0;
-            margin: 0 0 5px 0;
-            font-size: 1.8rem;
-            color: var(--primary-color);
+            margin: 0 0 4px 0;
+            font-size: 2.2rem;
+            font-family: var(--font-serif);
+            color: var(--primary-dark);
         }
 
-        .profile-title {
-            font-weight: 600;
-            color: var(--text-muted);
+        .profile-tag {
             font-size: 1.05rem;
-            margin-bottom: 15px;
+            font-weight: 500;
+            color: var(--highlight);
+            margin-bottom: 20px;
         }
 
-        .badge-links {
+        /* ACADEMIC SOCIO BADGES */
+        .social-row {
             margin-top: 25px;
             display: flex;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
-        .badge-btn {
+        .social-chip {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #f0f4f8;
-            color: var(--primary-color);
+            background: #F1F5F9;
+            color: var(--primary-dark);
             text-decoration: none;
-            padding: 8px 14px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.85rem;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.82rem;
             transition: all 0.2s ease;
-            border: 1px solid transparent;
+            border: 1px solid var(--border-subtle);
         }
 
-        .badge-btn:hover {
-            background: var(--primary-color);
+        .social-chip:hover {
+            background: var(--primary-dark);
             color: white;
+            border-color: var(--primary-dark);
             transform: translateY(-2px);
         }
 
-        /* CARD ROW LAYOUTS (Education, Experience, Honors, Conferences) */
-        .info-card-row {
+        /* STRUCTURAL CHRONOLOGY COMPONENT */
+        .timeline-item {
             display: grid;
-            grid-template-columns: 160px 1fr;
-            padding: 16px 0;
-            border-bottom: 1px solid var(--border-color);
+            grid-template-columns: 180px 1fr;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-subtle);
         }
 
-        .info-card-row:last-child {
+        .timeline-item:last-child {
             border-bottom: none;
         }
 
-        .info-card-date {
+        .timeline-date {
             font-weight: 700;
-            color: var(--primary-color);
-            font-size: 0.95rem;
+            color: var(--primary-accent);
+            font-size: 1rem;
+            font-feature-settings: "tnum"; /* Tabular numerals alignment */
         }
 
-        .info-card-content strong {
-            color: #1a202c;
-            font-size: 1.05rem;
+        .timeline-details strong {
+            color: var(--primary-dark);
+            font-size: 1.1rem;
+            font-weight: 600;
         }
 
-        .info-card-institution {
+        .timeline-institution {
             color: var(--text-muted);
             font-size: 0.95rem;
-            margin-top: 2px;
-        }
-
-        .info-card-meta {
-            font-size: 0.9rem;
-            margin-top: 5px;
-            color: var(--text-dark);
-        }
-
-        .speaker-badge {
-            display: inline-block;
-            background-color: rgba(44, 122, 123, 0.1);
-            color: var(--accent-green);
-            padding: 2px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-top: 6px;
-        }
-
-        .info-card-note {
-            margin-top: 6px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-style: italic;
-            border-left: 2px solid var(--border-color);
-            padding-left: 10px;
-        }
-
-        /* LISTS & PUBLICATIONS */
-        ul.styled-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        ul.styled-list li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 12px;
-        }
-
-        ul.styled-list li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        ol.pub-list {
-            padding-left: 20px;
-        }
-
-        ol.pub-list li {
-            margin-bottom: 20px;
-            padding-left: 5px;
-        }
-
-        .pub-doi {
-            font-size: 0.85rem;
-            margin-top: 4px;
-        }
-
-        .pub-doi a {
-            color: var(--primary-light);
-            text-decoration: none;
+            margin-top: 3px;
             font-weight: 500;
         }
 
-        .pub-doi a:hover {
+        .timeline-meta {
+            font-size: 0.9rem;
+            margin-top: 6px;
+        }
+
+        .badge-speaker {
+            display: inline-block;
+            background-color: #ECFDF5;
+            color: #065F46;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-top: 8px;
+            border: 1px solid #A7F3D0;
+        }
+
+        .timeline-context {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            padding-left: 12px;
+            border-left: 3px solid var(--border-subtle);
+            font-style: italic;
+        }
+
+        /* CHIP LISTS */
+        .chip-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .interest-chip {
+            background: #F1F5F9;
+            color: var(--primary-dark);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-weight: 500;
+            border: 1px solid var(--border-subtle);
+        }
+
+        /* SCHOLARLY ARCHIVE LIST */
+        ol.publication-pipeline {
+            padding-left: 0;
+            list-style: none;
+            counter-reset: pub-counter;
+        }
+
+        ol.publication-pipeline li {
+            counter-increment: pub-counter;
+            position: relative;
+            padding-left: 45px;
+            margin-bottom: 25px;
+        }
+
+        ol.publication-pipeline li::before {
+            content: counter(pub-counter, decimal-leading-zero);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-family: var(--font-sans);
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--highlight);
+            background: #EFF6FF;
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pub-index-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pub-doi-link {
+            font-size: 0.85rem;
+            margin-top: 6px;
+        }
+
+        .pub-doi-link a {
+            color: var(--highlight);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .pub-doi-link a:hover {
             text-decoration: underline;
         }
 
-        /* FOOTER */
+        /* SYSTEM FOOTER */
         footer {
             text-align: center;
-            padding: 30px;
-            background: var(--primary-color);
-            color: white;
-            margin-top: 60px;
-            font-size: 0.95rem;
+            padding: 40px;
+            background: var(--primary-dark);
+            color: #94A3B8;
+            margin-top: 80px;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* BREAKPOINTS & RESPONSIVENESS */
-        @media (max-width: 768px) {
-            header { padding: 40px 15px; }
-            header h1 { font-size: 2rem; }
+        /* SMOOTH MEDIA RESPONSIVENESS */
+        @media (max-width: 850px) {
+            header { padding: 60px 20px 45px 20px; }
+            header h1 { font-size: 2.4rem; }
             
             nav { justify-content: flex-start; }
             
-            section { padding: 25px 20px; }
+            section { padding: 30px 20px; }
             
-            .profile-flex { 
-                flex-direction: column; 
+            .profile-grid { 
+                grid-template-columns: 1fr; 
+                gap: 30px;
                 text-align: center;
-                gap: 20px;
             }
+            .profile-photo-container img { width: 170px; height: 170px; }
+            .social-row { justify-content: center; }
             
             p { text-align: left; }
             
-            .info-card-row {
+            .timeline-item {
                 grid-template-columns: 1fr;
-                gap: 5px;
-                padding: 14px 0;
-            }
-            
-            .info-card-date {
-                margin-bottom: 2px;
+                gap: 6px;
+                padding: 18px 0;
             }
         }
     </style>
@@ -352,456 +402,440 @@
 
 <header>
     <h1>Dr. Aung Zaw Myint</h1>
-    <p>Applied Mathematics | Nonlinear PDEs | Reaction-Diffusion Systems | Dynamical Systems | Free-Boundary Problems | Mathematical Biology</p>
+    <p>Applied Mathematics &bull; Nonlinear PDEs &bull; Reaction-Diffusion Systems &bull; Dynamical Systems &bull; Free Boundary Problems &bull; Mathematical Biology</p>
 </header>
 
 <nav>
     <a href="#profile">Profile</a>
-    <a href="#research">Research</a>
+    <a href="#research">ç</a>
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
-    <a href="#honors-awards">Honors &amp; Awards</a>
+    <a href="#honors">Honors</a>
     <a href="#publications">Publications</a>
-    <a href="#editorial-experience">Editorial Board</a>
+    <a href="#editorial">Service</a>
     <a href="#conferences">Conferences</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <div class="container">
 
-    <!-- BIOGRAPHY SECTION -->
+    <!-- BIOGRAPHY BLOCK -->
     <section id="profile">
-        <div class="profile-flex">
-            <div class="profile-photo-wrapper">
-            <img src="https://aung-zaw-myint.github.io/aungzawmyint.github.io/AZM_Pic.jpg" alt="Dr. Aung Zaw Myint">
-         </div>
-            <div class="profile-summary">
+        <div class="profile-grid">
+            <div class="profile-photo-container">
+                <img src="https://aung-zaw-myint.github.io/aungzawmyint.github.io/AZM_Pic.jpg" alt="Dr. Aung Zaw Myint">
+            </div>
+            <div class="profile-info">
                 <h3>Dr. Aung Zaw Myint</h3>
-                <p class="profile-title">Researcher</p>
-                <p style="margin: 0; color: #4a5568;">
-                    Specializing in the mathematical analysis of reaction-diffusion models, free boundary problems, and biological systems. Academic and research experience spanning across Myanmar, China, Germany, and Thailand.
+                <div class="profile-tag">Researcher</div>
+                <p style="color: var(--text-main); font-size: 1.02rem; padding-bottom: 5px;">
+                    Specializing in the mathematical analysis of reaction-diffusion models, free boundary problems, and complex biological networks. Scholarly matrix spanning research deployments across Myanmar, China, Germany, and Thailand.
                 </p>
                 
-                <div class="badge-links">
-                    <a href="https://orcid.org/0000-0003-3340-4864" target="_blank" class="badge-btn"><i class="fa-brands fa-orcid"></i> ORCID</a>
-                    <a href="https://www.researchgate.net/profile/Aung-Myint" target="_blank" class="badge-btn"><i class="fa-brands fa-researchgate"></i> ResearchGate</a>
-                    <a href="https://www.webofscience.com/wos/author/record/J-7803-2019" target="_blank" class="badge-btn"><i class="fa-solid fa-graduation-cap"></i> Web of Science</a>
-                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57200032535" target="_blank" class="badge-btn"><i class="fa-solid fa-book"></i> Scopus</a>
+                <div class="social-row">
+                    <a href="https://orcid.org/0000-0003-3340-4864" target="_blank" class="social-chip"><i class="fa-brands fa-orcid" style="color: #A6CE39;"></i> ORCID</a>
+                    <a href="https://www.researchgate.net/profile/Aung-Myint" target="_blank" class="social-chip"><i class="fa-brands fa-researchgate" style="color: #00CCBB;"></i> ResearchGate</a>
+                    <a href="https://www.webofscience.com/wos/author/record/J-7803-2019" target="_blank" class="social-chip"><i class="fa-solid fa-graduation-cap"></i> Web of Science</a>
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57200032535" target="_blank" class="social-chip"><i class="fa-solid fa-book"></i> Scopus</a>
                 </div>
             </div>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid var(--border-color); margin-bottom: 25px;">
+        <hr style="border: 0; border-top: 1px solid var(--border-subtle); margin: 35px 0 30px 0;">
 
         <p>
-            Dr. Aung Zaw Myint is currently a Postdoctoral Fellow at Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand. He has also served as an Associate Professor of Mathematics at the University of Mandalay, Myanmar, since 2021.
-            He received his Ph.D. in Applied Mathematics from Harbin Institute of Technology, China, specializing in Mathematical Biology with a focus on partial differential equations (PDE) models. His doctoral dissertation, “Qualitative Analysis of Some Reaction–Diffusion Systems,” investigated the qualitative behavior and mathematical structures of nonlinear diffusion processes arising in biological systems. His supervisor is Prof. Wang Mingxin, and his co-supervisor is Li Li.
+            Dr. Aung Zaw Myint serves as a Postdoctoral Fellow at the Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand. Concurrently, he maintains his appointment as Associate Professor of Mathematics at the University of Mandalay, Myanmar, where he has been a faculty member since 2021. 
+            He completed his Ph.D. in Applied Mathematics at the Harbin Institute of Technology (HIT), China, specializing in Mathematical Biology. His doctoral research, supervised by Prof. Wang Mingxin and co-supervised by Li Li, culminated in his dissertation titled <em>“Qualitative Analysis of Some Reaction–Diffusion Systems,”</em> focusing on structural analysis and analytical parameters of nonlinear diffusion mechanics.
         </p>
         <p>
-            His research interests include mathematical biology, reaction–diffusion systems, free boundary problems, nonlinear partial differential equations, and dynamical systems. His work emphasizes the global existence, uniqueness, and a priori estimates of nonnegative solutions, as well as the existence, bifurcation, and stability of non-constant steady-state solutions emerging from constant semi-trivial equilibria. He further investigates the spreading and vanishing dynamics in free-boundary problems associated with population, disease, and ecological models.
+            His core investigations explore structural traits of partial differential equations (PDEs), free boundary mechanics, dynamic population tracking, spatial heterogeneity, and epidemic networks. His published tracks deal heavily with global existence frameworks, multi-species boundary mappings, a priori estimates, and topological bifurcations branching out from variable semi-trivial equilibria models.
         </p>
     </section>
 
-    <!-- RESEARCH INTERESTS SECTION -->
+    <!-- RESEARCH MAPPINGS -->
     <section id="research">
-        <h2>Research Interests</h2>
-        <ul class="styled-list">
-            <li>Partial Differential Equations</li>
-            <li>Free Boundary Problems</li>
-            <li>Reaction-Diffusion Systems</li>
-            <li>Mathematical Biology (Predator-prey &amp; Chemotaxis models)</li>
-            <li>Nonlinear Analysis</li>
-        </ul>
+        <h2>Research Fields</h2>
+        <div class="chip-group">
+            <span class="interest-chip">Partial Differential Equations</span>
+            <span class="interest-chip">Free Boundary Problems</span>
+            <span class="interest-chip">Reaction-Diffusion Systems</span>
+            <span class="interest-chip">Mathematical Biology (Predator-Prey / Chemotaxis)</span>
+            <span class="interest-chip">Nonlinear Systems Analysis</span>
+        </div>
     </section>
 
-    <!-- EDUCATION SECTION -->
+    <!-- ACADEMIC TRAINING -->
     <section id="education">
         <h2>Education</h2>
-        <div class="info-card-container">
-            <div class="info-card-row">
-                <div class="info-card-date">2019</div>
-                <div class="info-card-content">
-                    <strong>Doctor of Science (Mathematics)</strong>
-                    <div class="info-card-institution">Harbin Institute of Technology, China</div>
+        <div class="timeline-wrapper">
+            <div class="timeline-item">
+                <div class="timeline-date">2019</div>
+                <div class="timeline-details">
+                    <strong>Doctor of Science (Applied Mathematics)</strong>
+                    <div class="timeline-institution">Harbin Institute of Technology, China</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">2011</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">2011</div>
+                <div class="timeline-details">
                     <strong>M.Sc. Mathematics</strong>
-                    <div class="info-card-institution">Kyaingtong University, Myanmar</div>
+                    <div class="timeline-institution">Kyaingtong University, Myanmar</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">2008</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">2008</div>
+                <div class="timeline-details">
                     <strong>B.Sc. Mathematics</strong>
-                    <div class="info-card-institution">Yadanabon University, Myanmar</div>
+                    <div class="timeline-institution">Yadanabon University, Myanmar</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROFESSIONAL EXPERIENCE SECTION -->
+    <!-- PROFESSIONAL CHRONOLOGY -->
     <section id="experience">
-        <h2>Professional Experience</h2>
-        <div class="info-card-container">
-            <div class="info-card-row">
-                <div class="info-card-date">2026 - Present</div>
-                <div class="info-card-content">
+        <h2>Professional Appointments</h2>
+        <div class="timeline-wrapper">
+            <div class="timeline-item">
+                <div class="timeline-date">2026 – Present</div>
+                <div class="timeline-details">
                     <strong>Postdoctoral Fellow</strong>
-                    <div class="info-card-institution">Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand</div>
+                    <div class="timeline-institution">Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">2021 - 2026</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">2021 – 2026</div>
+                <div class="timeline-details">
                     <strong>Associate Professor</strong>
-                    <div class="info-card-institution">Department of Mathematics, University of Mandalay, Myanmar</div>
+                    <div class="timeline-institution">Department of Mathematics, University of Mandalay, Myanmar</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">June - July 2024</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">June – July 2024</div>
+                <div class="timeline-details">
                     <strong>Visiting Professor</strong>
-                    <div class="info-card-institution">Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand</div>
+                    <div class="timeline-institution">Sirindhorn International Institute of Technology (SIIT), Thammasat University, Thailand</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">2019 - 2021</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">2019 – 2021</div>
+                <div class="timeline-details">
                     <strong>Lecturer</strong>
-                    <div class="info-card-institution">Department of Mathematics, University of Mandalay, Myanmar</div>
+                    <div class="timeline-institution">Department of Mathematics, University of Mandalay, Myanmar</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">Sep - Oct 2019</div>
-                <div class="info-card-content">
-                    <strong>Young Researcher (Scientific Exchange Program)</strong>
-                    <div class="info-card-institution">University of Heidelberg, Germany</div>
+            <div class="timeline-item">
+                <div class="timeline-date">Sep – Oct 2019</div>
+                <div class="timeline-details">
+                    <strong>Young Researcher (Scientific Exchange Track)</strong>
+                    <div class="timeline-institution">University of Heidelberg, Germany</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">Oct 2018</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">Oct 2018</div>
+                <div class="timeline-details">
                     <strong>Young Researcher Exchange</strong>
-                    <div class="info-card-institution">Zhejiang Lab, Hangzhou, China</div>
+                    <div class="timeline-institution">Zhejiang Lab, Hangzhou, China</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">Aug 2017</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">Aug 2017</div>
+                <div class="timeline-details">
                     <strong>Visiting Researcher</strong>
-                    <div class="info-card-institution">Chiang Mai University, Chiang Mai, Thailand</div>
+                    <div class="timeline-institution">Chiang Mai University, Thailand</div>
                 </div>
             </div>     
-            <div class="info-card-row">
-                <div class="info-card-date">2011 - 2015</div>
-                <div class="info-card-content">
-                    <strong>Tutor</strong>
-                    <div class="info-card-institution">Department of Mathematics, Yadanarbon University, Mandalay, Myanmar</div>
-                </div>
-            </div>     
-            <div class="info-card-row">
-                <div class="info-card-date">2011 - 2015</div>
-                <div class="info-card-content">
-                    <strong>Tutor</strong>
-                    <div class="info-card-institution">Department of Mathematics, Kyaingtong University, Eastern Shan State, Myanmar</div>
+            <div class="timeline-item">
+                <div class="timeline-date">2011 – 2015</div>
+                <div class="timeline-details">
+                    <strong>Faculty Tutor Team</strong>
+                    <div class="timeline-institution">Yadanarbon University &amp; Kyaingtong University, Myanmar</div>
                 </div>
             </div> 
         </div>  
     </section>
 
-    <!-- HONORS & AWARDS SECTION -->
-    <section id="honors-awards">
-        <h2>Honors &amp; Awards</h2>
-        <div class="info-card-container">
-            <div class="info-card-row">
-                <div class="info-card-date">2015 – 2020</div>
-                <div class="info-card-content">
-                    <strong>Chinese Scholarship Council (CSC) Scholarship Award</strong>
+    <!-- FELLOWSHIPS & DISTINCTIONS -->
+    <section id="honors">
+        <h2>Honors &amp; Distinctions</h2>
+        <div class="timeline-wrapper">
+            <div class="timeline-item">
+                <div class="timeline-date">2015 – 2020</div>
+                <div class="timeline-details">
+                    <strong>Chinese Scholarship Council (CSC) Award</strong>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">January 2020</div>
-                <div class="info-card-content">
-                    <strong>HIT STAR Award</strong>
-                    <div class="info-card-institution">Harbin Institute of Technology, Harbin, China</div>
-                    <div class="info-card-meta"><a href="http://studyathit.hit.edu.cn/post/detail/5665" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: underline;">Official Announcement</a></div>
+            <div class="timeline-item">
+                <div class="timeline-date">Jan 2020</div>
+                <div class="timeline-details">
+                    <strong>HIT STAR Laureate</strong>
+                    <div class="timeline-institution">Harbin Institute of Technology, China</div>
+                    <div class="timeline-meta"><a href="http://studyathit.hit.edu.cn/post/detail/5665" target="_blank" rel="noopener" style="color: var(--highlight); text-decoration: none; font-weight:600;">Official Document Link</a></div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">2019</div>
-                <div class="info-card-content">
-                    <strong>CSC PhD Student Outstanding Achievement Award</strong>
-                    <div class="info-card-institution">CSC PhD Student Forum, Beijing, China</div>
+            <div class="timeline-item">
+                <div class="timeline-date">2019</div>
+                <div class="timeline-details">
+                    <strong>CSC Outstanding Doctoral Academic Achievement Award</strong>
+                    <div class="timeline-institution">CSC PhD Forum, Beijing, China</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">2019</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">2019</div>
+                <div class="timeline-details">
                     <strong>Romberg Grant Award</strong>
-                    <div class="info-card-institution">Heidelberg University &amp; Heidelberg Laureate Forum Foundation, Heidelberg, Germany</div>
-                    <div class="info-card-note">Awarded to attend the 7th Heidelberg Laureate Forum.</div>
+                    <div class="timeline-institution">Heidelberg University &amp; Heidelberg Laureate Forum Foundation, Germany</div>
+                    <div class="timeline-context">Selected elite attendee delegate at the 7th Heidelberg Laureate Forum.</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">2019</div>
-                <div class="info-card-content">
-                    <strong>Math &amp; Art Project Honorable Certificate</strong>
-                    <div class="info-card-institution">7th Heidelberg Laureate Forum, Heidelberg, Germany</div>
-                    <div class="info-card-note">Received for the intercultural science-art project “Magritte Meets Science” as part of the forum.</div>
-                </div>
-            </div>
-            <div class="info-card-row">
-                <div class="info-card-date">2018</div>
-                <div class="info-card-content">
-                    <strong>International Young Talent Honor Badge</strong>
-                    <div class="info-card-institution">International Young Talent Forum, Zhejiang Lab, P.R. China</div>
+            <div class="timeline-item">
+                <div class="timeline-date">2019</div>
+                <div class="timeline-details">
+                    <strong>Math &amp; Art Project Distinction</strong>
+                    <div class="timeline-institution">7th Heidelberg Laureate Forum, Germany</div>
+                    <div class="timeline-context">Conferred for the specialized intercultural abstract research thesis "Magritte Meets Science."</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PUBLICATIONS SECTION -->
+    <!-- PEER REVIEWED SERIALS -->
     <section id="publications">
         <h2>Publications</h2>
         
-        <h3>International Peer-Reviewed Journals</h3>
-        <ol class="pub-list">
+        <h3>International Key Serials (Q1/Peer-Reviewed)</h3>
+        <ol class="publication-pipeline">
             <li>
-                <strong>Aung Zaw Myint</strong>, Aye Chan May, Mya Hnin Lwin, Toe Toe Shwe, &amp; Adisak Seesanea. 
-                "Dynamics and pattern formation in a diffusive Beddington-DeAngelis predator-prey model with fear effect," 
-                <em>Discrete and Continuous Dynamical Systems - Series B</em>, 2025. 
-                <div class="pub-doi">DOI: <a href="https://doi.org/10.3934/dcdsb.2025113" target="_blank" rel="noopener">10.3934/dcdsb.2025113</a></div>
+                <div class="pub-index-card">
+                    <span><strong>Aung Zaw Myint</strong>, Aye Chan May, Mya Hnin Lwin, Toe Toe Shwe, &amp; Adisak Seesanea. "Dynamics and pattern formation in a diffusive Beddington-DeAngelis predator-prey model with fear effect," <em>Discrete and Continuous Dynamical Systems - Series B</em>, 2025.</span>
+                    <div class="pub-doi-link">DOI: <a href="https://doi.org/10.3934/dcdsb.2025113" target="_blank" rel="noopener">10.3934/dcdsb.2025113</a></div>
+                </div>
             </li>
             <li>
-                <strong>Aung Zaw Myint</strong>. 
-                "Positive solutions of a diffusive two competitive species model with saturation," 
-                <em>Discrete &amp; Continuous Dynamical Systems – Series B</em>, 2022, 27(7): 3625-3641. 
-                <div class="pub-doi">Link: <a href="https://www.aimsciences.org/article/doi/10.3934/dcdsb.2021199" target="_blank" rel="noopener">AIMS Press</a></div>
+                <div class="pub-index-card">
+                    <span><strong>Aung Zaw Myint</strong>. "Positive solutions of a diffusive two competitive species model with saturation," <em>Discrete &amp; Continuous Dynamical Systems – Series B</em>, 2022, 27(7): 3625-3641.</span>
+                    <div class="pub-doi-link">Source: <a href="https://www.aimsciences.org/article/doi/10.3934/dcdsb.2021199" target="_blank" rel="noopener">AIMS Press Index</a></div>
+                </div>
             </li>
             <li>
-                <strong>Aung Zaw Myint</strong> &amp; Mingxin Wang. 
-                "Dynamics of Holling-type II Prey-Predator System with a protection zone for prey," 
-                <em>Applicable Analysis</em>, 2020. 
-                <div class="pub-doi">DOI: <a href="https://doi.org/10.1080/00036811.2020.1789595" target="_blank" rel="noopener">10.1080/00036811.2020.1789595</a></div>
+                <div class="pub-index-card">
+                    <span><strong>Aung Zaw Myint</strong> &amp; Mingxin Wang. "Dynamics of Holling-type II Prey-Predator System with a protection zone for prey," <em>Applicable Analysis</em>, 2020.</span>
+                    <div class="pub-doi-link">DOI: <a href="https://doi.org/10.1080/00036811.2020.1789595" target="_blank" rel="noopener">10.1080/00036811.2020.1789595</a></div>
+                </div>
             </li>
             <li>
-                <strong>Aung Zaw Myint</strong>, Jingping Wang, &amp; Mingxin Wang. 
-                "On the minimal Keller-Segel system with logistic growth," 
-                <em>Nonlinear Analysis: Real World Applications</em>, 2020, 55: 103121. 
-                <div class="pub-doi">Link: <a href="https://www.sciencedirect.com/science/article/abs/pii/S1468121820300390" target="_blank" rel="noopener">ScienceDirect</a></div>
+                <div class="pub-index-card">
+                    <span><strong>Aung Zaw Myint</strong>, Jingping Wang, &amp; Mingxin Wang. "On the minimal Keller-Segel system with logistic growth," <em>Nonlinear Analysis: Real World Applications</em>, 2020, 55: 103121.</span>
+                    <div class="pub-doi-link">Source: <a href="https://www.sciencedirect.com/science/article/abs/pii/S1468121820300390" target="_blank" rel="noopener">ScienceDirect Engine</a></div>
+                </div>
             </li>
             <li>
-                <strong>Aung Zaw Myint</strong>, Li Li, &amp; Mingxin Wang. 
-                "Qualitative analysis of a Belousov-Zhabotinskii reaction model," 
-                <em>Acta Math. Sin. (Engl. Ser.)</em>, 2018, 34(6): 975–991. 
-                <div class="pub-doi">Link: <a href="https://link.springer.com/article/10.1007/s10114-017-7295-8" target="_blank" rel="noopener">Springer</a></div>
+                <div class="pub-index-card">
+                    <span><strong>Aung Zaw Myint</strong>, Li Li, &amp; Mingxin Wang. "Qualitative analysis of a Belousov-Zhabotinskii reaction model," <em>Acta Math. Sin. (Engl. Ser.)</em>, 2018, 34(6): 975–991.</span>
+                    <div class="pub-doi-link">Source: <a href="https://link.springer.com/article/10.1007/s10114-017-7295-8" target="_blank" rel="noopener">Springer Link</a></div>
+                </div>
             </li>
         </ol>
 
-        <h3>University Research Journals &amp; Conference Proceedings</h3>
-        <ol class="pub-list">
+        <h3>Institutional Research Serials &amp; Symposia</h3>
+        <ol class="publication-pipeline">
             <li>
-                <strong>Aung Zaw Myint</strong>, Ko Ko Lwin, Khin Than Sint, &amp; Zaw Min Aung. 
-                "$\hat{q}$-Homotopy Analysis Transform Method for the Nonlinear Belousov-Zhabotinskii Reaction Model," 
-                <em>Mandalay University Research Journal</em>, Vol. 14, No. 2, December, 2023, 223-241.
+                <div class="pub-index-card">
+                    <span><strong>Aung Zaw Myint</strong>, Ko Ko Lwin, Khin Than Sint, &amp; Zaw Min Aung. "$\hat{q}$-Homotopy Analysis Transform Method for the Nonlinear Belousov-Zhabotinskii Reaction Model," <em>Mandalay University Research Journal</em>, 2023, 14(2): 223-241.</span>
+                </div>
             </li>
             <li>
-                Myat Tha Zin Hlaing &amp; <strong>Aung Zaw Myint</strong>. 
-                "Solving One-Dimensional Korteweg-De Vries Equation Based on Nonlinear Wave Equations," 
-                <em>Mandalay University Research Journal</em>, Vol. 13. No.2, December, 2022, 97-110.
+                <div class="pub-index-card">
+                    <span>Myat Tha Zin Hlaing &amp; <strong>Aung Zaw Myint</strong>. "Solving One-Dimensional Korteweg-De Vries Equation Based on Nonlinear Wave Equations," <em>Mandalay University Research Journal</em>, 2022, 13(2): 97-110.</span>
+                </div>
             </li>
             <li>
-                Aye Nandar Myint &amp; <strong>Aung Zaw Myint</strong>. 
-                "Existence and Uniqueness of Solutions for a Semilinear Problem Using Banach Fixed Point Theorem," 
-                <em>Mandalay University Research Journal</em>, Vol. 13. No.2, December, 2022, 121-128.
+                <div class="pub-index-card">
+                    <span>Aye Nandar Myint &amp; <strong>Aung Zaw Myint</strong>. "Existence and Uniqueness of Solutions for a Semilinear Problem Using Banach Fixed Point Theorem," <em>Mandalay University Research Journal</em>, 2022, 13(2): 121-128.</span>
+                </div>
             </li>
             <li>
-                Ei Nandar Moe, <strong>Aung Zaw Myint</strong>, &amp; Ei Thandar Soe. 
-                "Application of Elliptic Functions with Greenhill’s Pendulum," 
-                <em>Mandalay University Research Journal</em>, Vol. 13. No.2, December, 2022, 129-136.
+                <div class="pub-index-card">
+                    <span>Ei Nandar Moe, <strong>Aung Zaw Myint</strong>, &amp; Ei Thandar Soe. "Application of Elliptic Functions with Greenhill’s Pendulum," <em>Mandalay University Research Journal</em>, 2022, 13(2): 129-136.</span>
+                </div>
             </li>
             <li>
-                Ei Thandar Soe, <strong>Aung Zaw Myint</strong>, &amp; Ei Nandar Moe. 
-                "Some Properties of Jacobi Elliptic Functions," 
-                <em>Mandalay University Research Journal</em>, Vol. 13. No.2, December, 2022, 137-146.
+                <div class="pub-index-card">
+                    <span>Ei Thandar Soe, <strong>Aung Zaw Myint</strong>, &amp; Ei Nandar Moe. "Some Properties of Jacobi Elliptic Functions," <em>Mandalay University Research Journal</em>, 2022, 13(2): 137-146.</span>
+                </div>
             </li>
             <li>
-                Han Zaw Htoon, Aung Kyaw Min, &amp; <strong>Aung Zaw Myint</strong>. 
-                "Direct Sum of Vector Subspaces in a Finite Dimensional Vector Space," 
-                <em>Meiktila URJ</em>, Vol. 12. No.1, December, 2022, 200-207.
+                <div class="pub-index-card">
+                    <span>Han Zaw Htoon, Aung Kyaw Min, &amp; <strong>Aung Zaw Myint</strong>. "Direct Sum of Vector Subspaces in a Finite Dimensional Vector Space," <em>Meiktila URJ</em>, 2022, 12(1): 200-207.</span>
+                </div>
             </li>
             <li>
-                <strong>Aung Zaw Myint</strong> &amp; Khin Than Sint. 
-                "Positive solutions a diffusive Predator-prey Model in Heterogeneous Environment," 
-                <em>Mandalay University Research Journal</em>, Vol. 12. No.2, December, 2021, 159-169.
+                <div class="pub-index-card">
+                    <span><strong>Aung Zaw Myint</strong> &amp; Khin Than Sint. "Positive solutions a diffusive Predator-prey Model in Heterogeneous Environment," <em>Mandalay University Research Journal</em>, 2021, 12(2): 159-169.</span>
+                </div>
             </li>
             <li>
-                Khin Than Sint &amp; <strong>Aung Zaw Myint</strong>. 
-                "Solving Integral and Integro-Differential Equations via Laplace Transform Method," 
-                <em>Mandalay University Research Journal</em>, Vol. 12. No.2, December, 2021, 134-141.
+                <div class="pub-index-card">
+                    <span>Khin Than Sint &amp; <strong>Aung Zaw Myint</strong>. "Solving Integral and Integro-Differential Equations via Laplace Transform Method," <em>Mandalay University Research Journal</em>, 2021, 12(2): 134-141.</span>
+                </div>
             </li>
             <li>
-                Aye Nandar Myint &amp; <strong>Aung Zaw Myint</strong>. 
-                "Finding the Complementary Function of Differential Equations," 
-                <em>Mandalay University Research Journal</em>, Vol. 12. No.2, December, 2021, 170-181.
+                <div class="pub-index-card">
+                    <span>Aye Nandar Myint &amp; <strong>Aung Zaw Myint</strong>. "Finding the Complementary Function of Differential Equations," <em>Mandalay University Research Journal</em>, 2021, 12(2): 170-181.</span>
+                </div>
             </li>
             <li>
-                <strong>Aung Zaw Myint</strong>. 
-                "A mathematical model for COVID-19 transmission dynamics with a case study of Myanmar," 
-                <em>Proceedings of Forum "Math-for-Industry" 2021—Mathematics for Digital Economy</em>. Institute of Mathematics for Industry, Kyushu University, MI Lecture Note Vol.87, 2021.
+                <div class="pub-index-card">
+                    <span><strong>Aung Zaw Myint</strong>. "A mathematical model for COVID-19 transmission dynamics with a case study of Myanmar," <em>Proceedings of Forum "Math-for-Industry" 2021—Mathematics for Digital Economy</em>. Kyushu University, MI Lecture Note Vol.87, 2021.</span>
+                </div>
             </li>
             <li>
-                <strong>Aung Zaw Myint</strong>. 
-                "Fractional Reduced Differential Transform Method for Belousov-Zhabotinsky Reaction Model," 
-                <em>Mandalay University Research Journal</em>, Vol. 11. No.3, May, 2020, 237-251. 
-                <div class="pub-doi">Link: <a href="https://meral.edu.mm/records/5888" target="_blank" rel="noopener">MERAL Portal</a></div>
+                <div class="pub-index-card">
+                    <span><strong>Aung Zaw Myint</strong>. "Fractional Reduced Differential Transform Method for Belousov-Zhabotinsky Reaction Model," <em>Mandalay University Research Journal</em>, 2020, 11(3): 237-251.</span>
+                    <div class="pub-doi-link">Repository: <a href="https://meral.edu.mm/records/5888" target="_blank" rel="noopener">MERAL Portal Access</a></div>
+                </div>
             </li>
         </ol>
     </section>
 
-    <!-- EDITORIAL BOARD & SERVICE SECTION -->
-    <section id="editorial-experience">
-        <h2>Editorial Board &amp; Service</h2>
-        <div class="info-card-container">
-            <div class="info-card-row">
-                <div class="info-card-date">June 2025 – Pres.</div>
-                <div class="info-card-content">
+    <!-- SCIENTIFIC SERVICES -->
+    <section id="editorial">
+        <h2>Editorial &amp; Reviewer Service</h2>
+        <div class="timeline-wrapper">
+            <div class="timeline-item">
+                <div class="timeline-date">2025 – Present</div>
+                <div class="timeline-details">
                     <strong>Editorial Board Member</strong>
-                    <div class="info-card-institution" style="color: var(--primary-color); font-weight: 600;">American Journal of Applied Mathematics</div>
+                    <div class="timeline-institution">American Journal of Applied Mathematics</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">Nov 2022 – Pres.</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">2022 – Present</div>
+                <div class="timeline-details">
                     <strong>Guest Editor</strong>
-                    <div class="info-card-institution" style="color: var(--primary-color); font-weight: 600;">International Journal of Cognitive Computing in Engineering</div>
+                    <div class="timeline-institution">International Journal of Cognitive Computing in Engineering</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CONFERENCES SECTION -->
+    <!-- SYMPOSIA AND TALKS -->
     <section id="conferences">
         <h2>Conferences &amp; Presentations</h2>
         
-        <h3>Presented at Conferences</h3>
-        <div class="info-card-container">
-            <div class="info-card-row">
-                <div class="info-card-date">May 28–30, 2026</div>
-                <div class="info-card-content">
+        <h3>Selected Oral Research Presentation Papers</h3>
+        <div class="timeline-wrapper">
+            <div class="timeline-item">
+                <div class="timeline-date">May 2026</div>
+                <div class="timeline-details">
                     <strong>The AMM &amp; CNA 2026 Conference</strong>
-                    <div class="info-card-institution">Khon Kaen University, Thailand</div>
+                    <div class="timeline-institution">Khon Kaen University, Thailand</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">Mar 23–27, 2026</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">Mar 2026</div>
+                <div class="timeline-details">
                     <strong>Yanenko 105 – Analytical and Numerical Methods in Differential Equations</strong>
-                    <div class="info-card-institution">Hosted virtually by Suranaree University of Technology, Thailand</div>
+                    <div class="timeline-institution">Suranaree University of Technology, Thailand (Virtual Infrastructure)</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">Dec 5–13, 2022</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">Dec 2022</div>
+                <div class="timeline-details">
                     <strong>SEAMS School 2022 on Modern Trends in Signal and Data Processing</strong>
-                    <div class="info-card-institution">Institute of Mathematics, University of the Philippines Diliman, Quezon City, Philippines</div>
-                    <div><span class="speaker-badge">Invited Speaker (30-minute talk)</span></div>
+                    <div class="timeline-institution">Institute of Mathematics, University of the Philippines Diliman, Quezon City, Philippines</div>
+                    <div><span class="badge-speaker">Invited Session Speaker (30-Min Paper)</span></div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">Dec 12–16, 2021</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">Dec 2021</div>
+                <div class="timeline-details">
                     <strong>FORUM Mathematics for Industry 2021</strong>
-                    <div class="info-card-institution">Hanoi, Vietnam</div>
+                    <div class="timeline-institution">Hanoi, Vietnam</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">Aug 23 – Sep 3, 2021</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">Aug 2021</div>
+                <div class="timeline-details">
                     <strong>SEAMS School 2021 on Modern Theory and Optimization</strong>
-                    <div class="info-card-institution">Institute of Mathematics, Caraga State University, Butuan City, Philippines</div>
-                    <div><span class="speaker-badge">Invited Speaker (30-minute talk)</span></div>
+                    <div class="timeline-institution">Institute of Mathematics, Caraga State University, Philippines</div>
+                    <div><span class="badge-speaker">Invited Session Speaker (30-Min Paper)</span></div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">July 30–31, 2021</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+                <div class="timeline-date">July 2021</div>
+                <div class="timeline-details">
                     <strong>ICCMB 2021: International Conference on Computation and Mathematical Biology</strong>
-                    <div class="info-card-institution">Organized by the Bangladesh Society for Mathematical Biology (BSMB)</div>
+                    <div class="timeline-institution">Bangladesh Society for Mathematical Biology (BSMB)</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">Feb 2–5, 2021</div>
-                <div class="info-card-content">
-                    <strong>12th Virtual Conference on Dynamical Systems Applied to Biology and Natural Sciences (DSABNS)</strong>
-                    <div class="info-card-institution">Spain (Virtual)</div>
+            <div class="timeline-item">
+                <div class="timeline-date">Feb 2021</div>
+                <div class="timeline-details">
+                    <strong>12th Conference on Dynamical Systems Applied to Biology &amp; Natural Sciences (DSABNS)</strong>
+                    <div class="timeline-institution">Spain (Virtual Infrastructure)</div>
                 </div>
             </div>
         </div>
 
-        <h3>Attended / Participated</h3>
-        <div class="info-card-container">
-            <div class="info-card-row">
-                <div class="info-card-date">June 10–12, 2026</div>
-                <div class="info-card-content">
+        <h3>Symposia Attendance</h3>
+        <div class="timeline-wrapper">
+            <div class="timeline-item">
+                <div class="timeline-date">June 2026</div>
+                <div class="timeline-details">
                     <strong>The 2nd International Online Conference on Mathematics and Applications (IOCMA 2026)</strong>
-                    <div class="info-card-institution">Online Conference</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">March 27, 2026</div>
-                <div class="info-card-content">
-                    <strong>New Trends in Mathematical Biology</strong>
-                    <div class="info-card-institution">School of Arts and Sciences, Lebanese American University (LAU), Lebanon</div>
+            <div class="timeline-item">
+                <div class="timeline-date">March 2026</div>
+                <div class="timeline-details">
+                    <strong>New Trends in Mathematical Biology Seminar Series</strong>
+                    <div class="timeline-institution">School of Arts and Sciences, Lebanese University</div>
                 </div>
-            </div>
-            <div class="info-card-row">
-                <div class="info-card-date">Sep 21–25, 2020</div>
-                <div class="info-card-content">
+                <div class="timeline-item">
+               <div class="timeline-date">Sep 21–25, 2020</div>
+                <div class="timeline-details">
                     <strong>Virtual Heidelberg Laureate Forum (HLF)</strong>
-                    <div class="info-card-institution">Germany (Virtual)</div>
+                    <div class="timeline-institution">Germany (Virtual)</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">Dec 18–19, 2020</div>
-                <div class="info-card-content">
+             <div class="timeline-item">
+                 <div class="timeline-date">Dec 18–19, 2020</div>
+                 <div class="timeline-details">
                     <strong>International E-Conference: Recent Advances in Biomathematics on Theme "Biomathematics to Combat the Threats of Mysterious Pathogen"</strong>
-                    <div class="info-card-institution">Organized by the Bangladesh Society for Mathematical Biology (BSMB)</div>
+                    <div class="timeline-institution">Organized by the Bangladesh Society for Mathematical Biology (BSMB)</div>
                 </div>
             </div>
-            <div class="info-card-row">
-                <div class="info-card-date">Sep 19–25, 2019</div>
-                <div class="info-card-content">
+            <div class="timeline-item">
+               <div class="timeline-date">Sep 19–25, 2019</div>
+               <div class="timeline-details">
                     <strong>7th Heidelberg Laureate Forum (HLF)</strong>
-                    <div class="info-card-institution">Heidelberg, Germany</div>
+                    <div class="timeline-institution">Heidelberg, Germany</div>
                 </div>
             </div>
             <div class="info-card-row">
-                <div class="info-card-date">—</div>
-                <div class="info-card-content">
+                <div class="info-card-date">June 22—25, 2021</div>
+                <div class="timeline-details">
                     <strong>Stochastic Models and Experiments in Ecology and Biology</strong>
-                    <div class="info-card-institution">European Centre for Living Technology (ECLT), Venice, Italy</div>
+                    <div class="timeline-institution">European Centre for Living Technology (ECLT), Venice, Italy</div>
                 </div>
+            </div>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- DESK CONTACT -->
     <section id="contact">
-        <h2>Contact</h2>
-        <p style="font-size: 1.05rem; display: flex; flex-direction: column; gap: 8px;">
-            <span><i class="fa-regular fa-envelope" style="color: var(--primary-color); width: 24px;"></i> <strong>Primary Email:</strong> <a href="mailto:mdy.aungzawmyint@gmail.com" style="color: var(--primary-light); text-decoration: none;">mdy.aungzawmyint@gmail.com</a></span>
-            <span><i class="fa-solid fa-building-columns" style="color: var(--primary-color); width: 24px;"></i> <strong>Academic Email:</strong> <a href="mailto:aungzaw@siit.tu.ac.th" style="color: var(--primary-light); text-decoration: none;">aungzaw@siit.tu.ac.th</a></span>
-        </p>
+        <h2>Contact &amp; Coordinates</h2>
+         <p style="margin-bottom: 8px;"><strong>Primary Email:</strong> <a href="mailto:mdy.aungzawmyint@gmail.com" style="color: var(--primary-light); text-decoration: none;">mdy.aungzawmyint@gmail.com</a></p>
+        <p style="margin-bottom: 8px;"><strong>Institutional Emails:</strong> aungzaw@siit.tu.ac.th</p>
+        <p style="margin-bottom: 0;"><strong>Office Location:</strong> Sirindhorn International Institute of Technology, Thammasat University, Pathum Thani, Thailand.</p>
     </section>
 
 </div>
 
 <footer>
-    <p>&copy; 2026 Dr. Aung Zaw Myint. All Rights Reserved.</p>
+    <p>&copy; 2026 Dr. Aung Zaw Myint. Computational Academic Architecture &bull; All Rights Reserved.</p>
 </footer>
 
 </body>
